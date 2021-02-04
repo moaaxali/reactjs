@@ -1,5 +1,6 @@
-import TasteOfJSX from './TasteOfJSX/TasteOfJSX'
-import Comment from './Comment/Comment'
+// import TasteOfJSX from './TasteOfJSX/TasteOfJSX'
+// import Comment from './Comment/Comment'
+import StatefulComponent from './StatefulComponent/StatefulComponent'
 import './App.css';
 
 const user = {
@@ -20,12 +21,13 @@ const user = {
 function App() {
   return (
     <div className="App">
+      {/* <TasteOfJSX user={user} /> */}
       {/* <Comment
         date={comment.date}
         text={comment.text}
         author={comment.author}
       /> */}
-      <TasteOfJSX user={user} />
+      <StatefulComponent />
     </div>
   );
 }
