@@ -1,3 +1,5 @@
+import Avatar from './Avatar'
+
 function formatDate(date) {
   return date.toLocaleDateString();
 }
@@ -6,10 +8,7 @@ function Comment(props) {
   return (
     <div className="Comment">
       <div className="UserInfo">
-        <img className="Avatar"
-          src={props.author.avatarUrl}
-          alt={props.author.name}
-        />
+        <Avatar author={props.author} />
         <div className="UserInfo-name">
           {props.author.name}
         </div>
