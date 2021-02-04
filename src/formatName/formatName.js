@@ -1,5 +1,5 @@
 const formatName = (user) => {
-    return '#' + user.toUpperCase()
+    return user.firstName + ' ' + user.lastName
 }
 
 export default formatName;

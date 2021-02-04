@@ -3,9 +3,12 @@ import formatName from '../formatName/formatName'
 
 class TasteOfJSX extends Component {
   render() {
+    let { user } = this.props
     return (
       <div>
-        <p>Hello, {formatName(this.props.user)}</p>
+        <h3>Name: {formatName(user)}</h3>
+        <p>Favourite Figure: {user.favoriteFigure}</p>
+        <ul>{user.hobbies.map((item, i) => <li key={item + i}>{item}</li>)}</ul>
       </div>
     );
   }
