@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import formatName from '../formatName/formatName'
+import formatName from './formatName'
 
 class TasteOfJSX extends Component {
   render() {
