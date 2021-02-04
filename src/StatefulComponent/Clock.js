@@ -6,6 +6,10 @@ class Clock extends Component {
     this.state = { date: new Date() };
   }
 
+  componentDidMount() { }
+
+  componentWillUnmount() { }
+
   render() {
     return (
       <div>
