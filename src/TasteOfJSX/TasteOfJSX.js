@@ -2,10 +2,6 @@ import React, { Component } from 'react'
 import formatName from '../formatName/formatName'
 
 class TasteOfJSX extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
       <div>
