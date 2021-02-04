@@ -1,9 +1,10 @@
+import TasteOfJSX from './TasteOfJSX/TasteOfJSX'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Starter Template updated!</h1>
+      <TasteOfJSX user="maaz" />
     </div>
   );
 }
