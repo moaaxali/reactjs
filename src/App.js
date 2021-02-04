@@ -3,12 +3,12 @@
 import StatefulComponent from './StatefulComponent/StatefulComponent'
 import './App.css';
 
-const user = {
-  firstName: 'Maaz',
-  lastName: 'Ali',
-  favoriteFigure: 7,
-  hobbies: ['Soccer', 'Vollyball', 'Hiking', 'Camping', 'Swimming', 'Coding'],
-}
+// const user = {
+//   firstName: 'Maaz',
+//   lastName: 'Ali',
+//   favoriteFigure: 7,
+//   hobbies: ['Soccer', 'Vollyball', 'Hiking', 'Camping', 'Swimming', 'Coding'],
+// }
 // const comment = {
 //   date: new Date(),
 //   text: 'I hope you enjoy learning React!',

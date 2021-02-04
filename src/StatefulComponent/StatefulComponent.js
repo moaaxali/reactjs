@@ -1,14 +1,12 @@
-// Ticking clock example, this code might not work
-// but we are going to update it step-by-step
-const StatefulComponent = () => {
-  return (
-    <div>
-      <h1>Hello, world!</h1>
-      <h2>It is {new Date().toLocaleTimeString()}.</h2>
-    </div>
-  );
-}
+import React, { Component } from 'react'
+import Clock from './Clock'
 
-setInterval(StatefulComponent, 1000);
+class StatefulComponent extends Component {
+  render() {
+    return (
+      <Clock date={new Date()} />
+    );
+  }
+}
 
 export default StatefulComponent
