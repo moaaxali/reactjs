@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import UserGreet from './UserGreet'
+import LoginControl from './LoginControl'
 
 class ConditionalRendering extends Component {
   constructor(props) {
@@ -8,7 +8,7 @@ class ConditionalRendering extends Component {
 
   render() {
     return (
-      <UserGreet isLoggedIn={false} />
+      <LoginControl />
     );
   }
 }
