@@ -1,6 +1,7 @@
 // import TasteOfJSX from './TasteOfJSX/TasteOfJSX'
 import Comment from './Comment/Comment'
 import './App.css';
+import ConditionalRendering from './ConditionalRendering/ConditionalRendering';
 
 // const user = {
 //   firstName: 'Maaz',
@@ -26,6 +27,7 @@ function App() {
         author={comment.author}
       />
       {/* <TasteOfJSX user={user} /> */}
+      <ConditionalRendering />
     </div>
   );
 }
