@@ -1,6 +1,7 @@
 // import TasteOfJSX from './TasteOfJSX/TasteOfJSX'
 // import Comment from './Comment/Comment'
 import StatefulComponent from './StatefulComponent/StatefulComponent'
+import EventHandling from './EventHandling/Toggle'
 import './App.css';
 
 // const user = {
@@ -28,6 +29,7 @@ function App() {
         author={comment.author}
       /> */}
       <StatefulComponent />
+      <EventHandling />
     </div>
   );
 }
