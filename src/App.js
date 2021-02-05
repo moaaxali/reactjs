@@ -3,6 +3,7 @@
 import StatefulComponent from './StatefulComponent/StatefulComponent'
 import EventHandling from './EventHandling/Toggle'
 import './App.css';
+import PassingArgsToHandler from './EventHandling/PassingArgsToHandler';
 
 // const user = {
 //   firstName: 'Maaz',
@@ -30,6 +31,7 @@ function App() {
       /> */}
       <StatefulComponent />
       <EventHandling />
+      <PassingArgsToHandler />
     </div>
   );
 }

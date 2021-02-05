@@ -6,7 +6,8 @@ class EventHandling extends Component {
   render() {
     <div>
       <Toggle />
-      <PassingArgsToHandler />
+      <h1>hello</h1>
+      <PassingArgsToHandler name="Maaz" />
     </div>
   }
 }

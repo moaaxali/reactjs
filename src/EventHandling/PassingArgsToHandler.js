@@ -7,13 +7,12 @@ class PassingArgsToHandler extends Component {
   }
 
   handleClick(e) {
-    alert(e.fname)
+    alert(e)
   }
 
   render() {
-    fname = 'Maaz';
     return (
-      <button onClick={this.handleClick.bind(this, fname)} >
+      <button onClick={this.handleClick.bind(this, 'Maaz')} >
         Say Hello!
       </button>
     );
