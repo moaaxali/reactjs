@@ -5,10 +5,12 @@ import '../App.css'
 
 class EventHandling extends Component {
   render() {
-    <div className="Component">
-      <Toggle />
-      <PassingArgsToHandler name="Maaz" />
-    </div>
+    return (
+      <div className="Component">
+        <Toggle />
+        <PassingArgsToHandler name="Maaz" />
+      </div>
+    );
   }
 }
 
