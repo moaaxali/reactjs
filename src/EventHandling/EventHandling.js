@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
 import Toggle from './Toggle'
-import PassingArgsToHandler from './PassingArgsToHandler'
+// import PassingArgsToHandler from './PassingArgsToHandler'
 import '../App.css'
 
 class EventHandling extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
-    <div className="Component">
-      <Toggle />
-      <PassingArgsToHandler name="Maaz" />
-    </div>
+    return (
+      <div className="Component">
+        <Toggle />
+        {/* <PassingArgsToHandler name="Maaz" /> */}
+      </div>
+    );
   }
 }
 
