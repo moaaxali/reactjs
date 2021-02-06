@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import Toggle from './Toggle'
 import PassingArgsToHandler from './PassingArgsToHandler'
+import '../App.css'
 
 class EventHandling extends Component {
   render() {
-    <div>
+    <div className="Component">
       <Toggle />
-      <h1>hello</h1>
       <PassingArgsToHandler name="Maaz" />
     </div>
   }

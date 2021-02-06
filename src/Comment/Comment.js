@@ -1,4 +1,5 @@
 import UserInfo from "./UserInfo";
+import '../App.css'
 
 function formatDate(date) {
   return date.toLocaleDateString();
@@ -6,7 +7,7 @@ function formatDate(date) {
 
 function Comment(props) {
   return (
-    <div className="Comment">
+    <div className="Component">
       <UserInfo author={props.author} />
       <div className="Comment-text">
         {props.text}

@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
 import UserGreet from './UserGreet';
+import '../App.css'
 
 class LoginControl extends Component {
   constructor(props) {
@@ -30,7 +31,7 @@ class LoginControl extends Component {
     }
 
     return (
-      <div>
+      <div className="Component">
         <UserGreet isLoggedIn={isLoggedIn} />
         {button}
       </div>
