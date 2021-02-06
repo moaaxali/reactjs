@@ -4,6 +4,7 @@ import StatefulComponent from './StatefulComponent/StatefulComponent'
 import EventHandling from './EventHandling/Toggle'
 import './App.css';
 import PassingArgsToHandler from './EventHandling/PassingArgsToHandler';
+import ConditionalRendering from './ConditionalRendering/ConditionalRendering';
 
 // const user = {
 //   firstName: 'Maaz',
@@ -28,10 +29,12 @@ function App() {
         date={comment.date}
         text={comment.text}
         author={comment.author}
+<<<<<<< HEAD
       /> */}
       <StatefulComponent />
       <EventHandling />
       <PassingArgsToHandler />
+      <ConditionalRendering />
     </div>
   );
 }
