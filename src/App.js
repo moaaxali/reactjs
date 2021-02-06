@@ -1,9 +1,8 @@
 import TasteOfJSX from './TasteOfJSX/TasteOfJSX'
 import Comment from './Comment/Comment'
 import StatefulComponent from './StatefulComponent/StatefulComponent'
-import EventHandling from './EventHandling/Toggle'
+import EventHandling from './EventHandling/EventHandling'
 import './App.css';
-import PassingArgsToHandler from './EventHandling/PassingArgsToHandler';
 import ConditionalRendering from './ConditionalRendering/ConditionalRendering';
 
 const user = {
@@ -32,7 +31,6 @@ function App() {
       />
       <StatefulComponent />
       <EventHandling />
-      <PassingArgsToHandler />
       <ConditionalRendering />
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Toggle from './Toggle'
-// import PassingArgsToHandler from './PassingArgsToHandler'
+import PassingArgsToHandler from './PassingArgsToHandler'
 import '../App.css'
 
 class EventHandling extends Component {
@@ -11,7 +11,7 @@ class EventHandling extends Component {
     return (
       <div className="Component">
         <Toggle />
-        {/* <PassingArgsToHandler name="Maaz" /> */}
+        <PassingArgsToHandler name="Maaz" />
       </div>
     );
   }
