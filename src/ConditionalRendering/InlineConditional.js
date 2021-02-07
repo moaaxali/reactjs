@@ -23,7 +23,7 @@ class InlineConditional extends Component {
   render() {
     const isLoggedIn = this.state.isLoggedIn;
     return (
-      <div>
+      <div className="Component">
         <div>
           {/* Also do a button to cancel and hide the warning */}
           <WarningBanner
