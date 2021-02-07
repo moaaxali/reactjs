@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import InlineLogical from './InlineLogical';
 import LoginControl from './LoginControl'
 import CheckingFalsy from './CheckingFalsy'
+import InlineConditional from './InlineConditional';
 
 class ConditionalRendering extends Component {
   constructor(props) {
@@ -14,10 +15,11 @@ class ConditionalRendering extends Component {
 
   render() {
     return (
-      <div>
+      <div className="Component">
         <LoginControl />
         <InlineLogical unreadMessages={this.state.unreadMessages} />
         <CheckingFalsy count={this.state.count} />
+        <InlineConditional />
       </div>
     );
   }
