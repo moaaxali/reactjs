@@ -9,7 +9,7 @@ class ConditionalRendering extends Component {
     super(props);
     this.state = {
       unreadMessages: ["abc", "xyz", "lmn"],
-      count: 0
+      count: 0,
     }
   }
 
