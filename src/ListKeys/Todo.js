@@ -6,7 +6,10 @@ const Todo = (props) => {
     </li>
   )
   return (
-    <ul>{todoItems}</ul>
+    <div className="Component">
+      <p>With item index instead of key or id</p>
+      <ul>{todoItems}</ul>
+    </div>
   );
 }
 

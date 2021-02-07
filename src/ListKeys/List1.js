@@ -6,7 +6,10 @@ const List1 = (props) => {
     </li>
   );
   return (
-    <ul>{listItems}</ul>
+    <div className="Component">
+      <p>With keys specified</p>
+      <ul>{listItems}</ul>
+    </div>
   );
 }
 
