@@ -4,6 +4,7 @@ import StatefulComponent from './StatefulComponent/StatefulComponent'
 import EventHandling from './EventHandling/EventHandling'
 import './App.css';
 import ConditionalRendering from './ConditionalRendering/ConditionalRendering';
+import ListKeys from './ListKeys/ListKeys';
 
 const user = {
   firstName: 'Maaz',
@@ -32,6 +33,7 @@ function App() {
       <StatefulComponent />
       <EventHandling />
       <ConditionalRendering />
+      <ListKeys />
     </div>
   );
 }
