@@ -1,7 +1,7 @@
 const InlineLogical = (props) => {
   const unreadMessages = props.unreadMessages;
   return (
-    <div>
+    <div className="Component">
       <h1>Hello!</h1>
       {unreadMessages.length > 0 &&
         <h2>

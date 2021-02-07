@@ -14,7 +14,7 @@ class ConditionalRendering extends Component {
 
   render() {
     return (
-      <div>
+      <div className="Component">
         <LoginControl />
         <InlineLogical unreadMessages={this.state.unreadMessages} />
         <CheckingFalsy count={this.state.count} />
