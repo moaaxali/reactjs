@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ControlledComponent from './ControlledComponent'
 import TextArea from './TextArea'
+import TheSelectTag from './TheSelectTag'
 
 export class Forms extends Component {
   render() {
@@ -8,6 +9,7 @@ export class Forms extends Component {
       <div className="Component">
         <ControlledComponent />
         <TextArea />
+        <TheSelectTag />
       </div>
     );
   }
