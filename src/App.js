@@ -5,6 +5,7 @@ import EventHandling from './EventHandling/EventHandling'
 import './App.css';
 import ConditionalRendering from './ConditionalRendering/ConditionalRendering';
 import ListKeys from './ListKeys/ListKeys';
+import Forms from './Forms/Forms';
 
 const user = {
   firstName: 'Maaz',
@@ -34,6 +35,7 @@ function App() {
       <EventHandling />
       <ConditionalRendering />
       <ListKeys />
+      <Forms />
     </div>
   );
 }
