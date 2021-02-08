@@ -5,7 +5,7 @@ export class MultipleInputs extends Component {
     super(props);
 
     this.state = {
-      isGoing: false,
+      isGoing: true,
       noOfGuests: 2
     };
     this.handleChange = this.handleChange.bind(this);
@@ -23,7 +23,7 @@ export class MultipleInputs extends Component {
   }
 
   handleSubmit(e) {
-    alert('Reserved!')
+    alert('Done')
     e.preventDefault();
   }
 
@@ -33,7 +33,7 @@ export class MultipleInputs extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>Is going:
             <input
-              name="checkbox"
+              name="isGoing"
               type="checkbox"
               checked={this.state.isGoing}
               onChange={this.handleChange} />
@@ -41,7 +41,7 @@ export class MultipleInputs extends Component {
           <br />
           <label>No. of guests:
             <input
-              name="guests"
+              name="noOfGuests"
               type="number"
               value={this.state.noOfGuests}
               onChange={this.handleChange} />
