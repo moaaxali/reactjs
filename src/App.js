@@ -6,6 +6,7 @@ import './App.css';
 import ConditionalRendering from './ConditionalRendering/ConditionalRendering';
 import ListKeys from './ListKeys/ListKeys';
 import Forms from './Forms/Forms';
+import LiftingStateUp from './LiftingStateUp/LiftingStateUp';
 
 const user = {
   firstName: 'Maaz',
@@ -36,6 +37,7 @@ function App() {
       <ConditionalRendering />
       <ListKeys />
       <Forms />
+      <LiftingStateUp />
     </div>
   );
 }
