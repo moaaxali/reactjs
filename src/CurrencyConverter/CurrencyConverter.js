@@ -40,14 +40,109 @@ function tryConvert(amount, from, convert) {
 }
 
 export class CurrencyConverter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      amount: '',
+      currency: 'pkr'
+    };
+    this.handlePkrChange = this.handlePkrChange.bind(this);
+    this.handleUsdChange = this.handleUsdChange.bind(this);
+    this.handleGbpChange = this.handleGbpChange.bind(this);
+    this.handleEurChange = this.handleEurChange.bind(this);
+    this.handleJpyChange = this.handleJpyChange.bind(this);
+  }
+
+  handlePkrChange(amount) {
+    this.setState({ currency: 'pkr', amount });
+  }
+
+  handleUsdChange(amount) {
+    this.setState({ currency: 'usd', amount });
+  }
+
+  handleGbpChange(amount) {
+    this.setState({ currency: 'gbp', amount });
+  }
+
+  handleEurChange(amount) {
+    this.setState({ currency: 'eur', amount });
+  }
+
+  handleJpyChange(amount) {
+    this.setState({ currency: 'jpy', amount });
+  }
+
   render() {
+    const currency = this.state.currency;
+    const amount = this.state.amount;
+    let { pkr, usd, gbp, eur, jpy } = '';
+    switch (currency) {
+      case 'pkr':
+        pkr = amount;
+        usd = tryConvert(amount, 'pkr', toUsd)
+        gbp = tryConvert(amount, 'pkr', toGbp)
+        eur = tryConvert(amount, 'pkr', toEur)
+        jpy = tryConvert(amount, 'pkr', toJpy)
+        break;
+      case 'usd':
+        usd = amount;
+        pkr = tryConvert(amount, 'usd', toPkr)
+        gbp = tryConvert(amount, 'usd', toGbp)
+        eur = tryConvert(amount, 'usd', toEur)
+        jpy = tryConvert(amount, 'usd', toJpy)
+        break;
+      case 'gbp':
+        gbp = amount;
+        pkr = tryConvert(amount, 'gbp', toPkr)
+        usd = tryConvert(amount, 'gbp', toUsd)
+        eur = tryConvert(amount, 'gbp', toEur)
+        jpy = tryConvert(amount, 'gbp', toJpy)
+        break;
+      case 'eur':
+        eur = amount;
+        pkr = tryConvert(amount, 'eur', toPkr)
+        usd = tryConvert(amount, 'eur', toUsd)
+        gbp = tryConvert(amount, 'eur', toGbp)
+        jpy = tryConvert(amount, 'eur', toJpy)
+        break;
+      case 'jpy':
+        jpy = amount;
+        pkr = tryConvert(amount, 'jpy', toPkr)
+        usd = tryConvert(amount, 'jpy', toUsd)
+        gbp = tryConvert(amount, 'jpy', toGbp)
+        eur = tryConvert(amount, 'jpy', toEur)
+        break;
+
+    }
+
     return (
       <div>
-        <AmountInput currency="pkr" />
-        <AmountInput currency="usd" />
-        <AmountInput currency="gbp" />
-        <AmountInput currency="eur" />
-        <AmountInput currency="jpy" />
+        <AmountInput
+          currency="pkr"
+          amount={pkr}
+          onAmountChange={this.handlePkrChange}
+        />
+        <AmountInput
+          currency="usd"
+          amount={usd}
+          onAmountChange={this.handleUsdChange}
+        />
+        <AmountInput
+          currency="gbp"
+          amount={gbp}
+          onAmountChange={this.handleGbpChange}
+        />
+        <AmountInput
+          currency="eur"
+          amount={eur}
+          onAmountChange={this.handleEurChange}
+        />
+        <AmountInput
+          currency="jpy"
+          amount={jpy}
+          onAmountChange={this.handleJpyChange}
+        />
       </div>
     )
   }
