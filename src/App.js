@@ -7,6 +7,7 @@ import ConditionalRendering from './ConditionalRendering/ConditionalRendering';
 import ListKeys from './ListKeys/ListKeys';
 import Forms from './Forms/Forms';
 import LiftingStateUp from './LiftingStateUp/LiftingStateUp';
+import CurrencyConverter from './CurrencyConverter/CurrencyConverter';
 
 const user = {
   firstName: 'Maaz',
@@ -38,6 +39,7 @@ function App() {
       <ListKeys />
       <Forms />
       <LiftingStateUp />
+      <CurrencyConverter />
     </div>
   );
 }
