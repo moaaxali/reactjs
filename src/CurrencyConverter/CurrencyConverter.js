@@ -1,28 +1,15 @@
 import React, { Component } from 'react'
+import AmountInput from './AmountInput'
 
 export class CurrencyConverter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      amount: ''
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(e) {
-    this.setState({ amount: e.target.value })
-  }
-
   render() {
-    const amount = this.state.amount;
     return (
       <div>
-        <fieldset>
-          <legend>Enter currency in PKR:</legend>
-          <input
-            value={amount}
-            onChange={this.handleChange} />
-        </fieldset>
+        <AmountInput currency="pkr" />
+        <AmountInput currency="usd" />
+        <AmountInput currency="gbp" />
+        <AmountInput currency="eur" />
+        <AmountInput currency="jpy" />
       </div>
     )
   }
