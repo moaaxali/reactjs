@@ -9,32 +9,16 @@ const exchangeRates = {
   jpy: { pkr: 1.53, usd: 0.0096, gbp: 0.0069, eur: 0.0079 },
 }
 
-function toPkr(amount, from) {
-  return amount * exchangeRates[from]['pkr']
+function convert(amount, from, to) {
+  return amount * exchangeRates[from][to]
 }
 
-function toUsd(amount, from) {
-  return amount * exchangeRates[from]['usd']
-}
-
-function toGbp(amount, from) {
-  return amount * exchangeRates[from]['gbp']
-}
-
-function toEur(amount, from) {
-  return amount * exchangeRates[from]['eur']
-}
-
-function toJpy(amount, from) {
-  return amount * exchangeRates[from]['jpy']
-}
-
-function tryConvert(amount, from, convert) {
+function tryConvert(amount, from, to) {
   const input = parseFloat(amount);
   if (Number.isNaN(input)) {
     return '';
   }
-  const output = convert(input, from);
+  const output = convert(input, from, to);
   const rounded = Math.round(output * 1000) / 1000;
   return rounded.toString();
 }
@@ -80,38 +64,38 @@ export class CurrencyConverter extends Component {
     switch (currency) {
       case 'pkr':
         pkr = amount;
-        usd = tryConvert(amount, 'pkr', toUsd)
-        gbp = tryConvert(amount, 'pkr', toGbp)
-        eur = tryConvert(amount, 'pkr', toEur)
-        jpy = tryConvert(amount, 'pkr', toJpy)
+        usd = tryConvert(amount, 'pkr', 'usd')
+        gbp = tryConvert(amount, 'pkr', 'gbp')
+        eur = tryConvert(amount, 'pkr', 'eur')
+        jpy = tryConvert(amount, 'pkr', 'jpy')
         break;
       case 'usd':
         usd = amount;
-        pkr = tryConvert(amount, 'usd', toPkr)
-        gbp = tryConvert(amount, 'usd', toGbp)
-        eur = tryConvert(amount, 'usd', toEur)
-        jpy = tryConvert(amount, 'usd', toJpy)
+        pkr = tryConvert(amount, 'usd', 'pkr')
+        gbp = tryConvert(amount, 'usd', 'gbp')
+        eur = tryConvert(amount, 'usd', 'eur')
+        jpy = tryConvert(amount, 'usd', 'jpy')
         break;
       case 'gbp':
         gbp = amount;
-        pkr = tryConvert(amount, 'gbp', toPkr)
-        usd = tryConvert(amount, 'gbp', toUsd)
-        eur = tryConvert(amount, 'gbp', toEur)
-        jpy = tryConvert(amount, 'gbp', toJpy)
+        pkr = tryConvert(amount, 'gbp', 'pkr')
+        usd = tryConvert(amount, 'gbp', 'usd')
+        eur = tryConvert(amount, 'gbp', 'eur')
+        jpy = tryConvert(amount, 'gbp', 'jpy')
         break;
       case 'eur':
         eur = amount;
-        pkr = tryConvert(amount, 'eur', toPkr)
-        usd = tryConvert(amount, 'eur', toUsd)
-        gbp = tryConvert(amount, 'eur', toGbp)
-        jpy = tryConvert(amount, 'eur', toJpy)
+        pkr = tryConvert(amount, 'eur', 'pkr')
+        usd = tryConvert(amount, 'eur', 'usd')
+        gbp = tryConvert(amount, 'eur', 'gbp')
+        jpy = tryConvert(amount, 'eur', 'jpy')
         break;
       case 'jpy':
         jpy = amount;
-        pkr = tryConvert(amount, 'jpy', toPkr)
-        usd = tryConvert(amount, 'jpy', toUsd)
-        gbp = tryConvert(amount, 'jpy', toGbp)
-        eur = tryConvert(amount, 'jpy', toEur)
+        pkr = tryConvert(amount, 'jpy', 'pkr')
+        usd = tryConvert(amount, 'jpy', 'usd')
+        gbp = tryConvert(amount, 'jpy', 'gbp')
+        eur = tryConvert(amount, 'jpy', 'eur')
         break;
 
     }
