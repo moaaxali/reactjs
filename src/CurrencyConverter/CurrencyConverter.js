@@ -9,52 +9,32 @@ const exchangeRates = {
   jpy: { pkr: 1.53, usd: 0.0096, gbp: 0.0069, eur: 0.0079 },
 }
 
-function toPkr(from) {
-  if (from == 'pkr') {
-    return
-  } else {
-    return
-  }
+function toPkr(amount, from) {
+  return amount * exchangeRates[from]['pkr']
 }
 
-function toUsd(from) {
-  if (from == 'usd') {
-    return
-  } else {
-    return
-  }
+function toUsd(amount, from) {
+  return amount * exchangeRates[from]['usd']
 }
 
-function toGbp(from) {
-  if (from == 'gbp') {
-    return
-  } else {
-    return
-  }
+function toGbp(amount, from) {
+  return amount * exchangeRates[from]['gbp']
 }
 
-function toEur(from) {
-  if (from == 'eur') {
-    return
-  } else {
-    return
-  }
+function toEur(amount, from) {
+  return amount * exchangeRates[from]['eur']
 }
 
-function toJpy(from) {
-  if (from == 'jpy') {
-    return
-  } else {
-    return
-  }
+function toJpy(amount, from) {
+  return amount * exchangeRates[from]['jpy']
 }
 
-function tryConvert(temperature, convert) {
-  const input = parseFloat(temperature);
+function tryConvert(amount, from, convert) {
+  const input = parseFloat(amount);
   if (Number.isNaN(input)) {
     return '';
   }
-  const output = convert(input);
+  const output = convert(input, from);
   const rounded = Math.round(output * 1000) / 1000;
   return rounded.toString();
 }
