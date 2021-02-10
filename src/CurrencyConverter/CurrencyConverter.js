@@ -9,6 +9,56 @@ const exchangeRates = {
   jpy: { pkr: 1.53, usd: 0.0096, gbp: 0.0069, eur: 0.0079 },
 }
 
+function toPkr(from) {
+  if (from == 'pkr') {
+    return
+  } else {
+    return
+  }
+}
+
+function toUsd(from) {
+  if (from == 'usd') {
+    return
+  } else {
+    return
+  }
+}
+
+function toGbp(from) {
+  if (from == 'gbp') {
+    return
+  } else {
+    return
+  }
+}
+
+function toEur(from) {
+  if (from == 'eur') {
+    return
+  } else {
+    return
+  }
+}
+
+function toJpy(from) {
+  if (from == 'jpy') {
+    return
+  } else {
+    return
+  }
+}
+
+function tryConvert(temperature, convert) {
+  const input = parseFloat(temperature);
+  if (Number.isNaN(input)) {
+    return '';
+  }
+  const output = convert(input);
+  const rounded = Math.round(output * 1000) / 1000;
+  return rounded.toString();
+}
+
 export class CurrencyConverter extends Component {
   render() {
     return (
