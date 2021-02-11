@@ -1,10 +1,4 @@
-function FancyBorder(props) {
-  return (
-    <div className={'FancyBorder FancyBorder-' + props.color}>
-      {props.children}
-    </div>
-  );
-}
+import FancyBorder from './FancyBorder'
 
 function Dialog() {
   return (
