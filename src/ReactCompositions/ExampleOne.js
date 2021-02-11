@@ -23,7 +23,7 @@ function Dialog() {
 
 function ExampleOne() {
   return (
-    <div>
+    <div className="Component">
       <p><strong>Compositions</strong></p>
       <p>Method#1 Containment Direct Children</p>
       <Dialog />
