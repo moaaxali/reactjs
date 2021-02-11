@@ -8,6 +8,7 @@ import ListKeys from './ListKeys/ListKeys';
 import Forms from './Forms/Forms';
 import LiftingStateUp from './LiftingStateUp/LiftingStateUp';
 import CurrencyConverter from './CurrencyConverter/CurrencyConverter';
+import ReactCompositions from './ReactCompositions/ReactCompositions';
 
 const user = {
   firstName: 'Maaz',
@@ -40,6 +41,7 @@ function App() {
       <Forms />
       <LiftingStateUp />
       <CurrencyConverter />
+      <ReactCompositions />
     </div>
   );
 }
