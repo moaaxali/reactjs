@@ -4,11 +4,21 @@ import ProductRow from './ProductRow'
 
 export class ProductTable extends Component {
   render() {
+    const filterText = this.props.filterText;
+    const inStockOnly = this.props.inStockOnly;
+
     const rows = [];
     let lastCategory = null;
 
     this.props.products.forEach((product) => {
       if (product.category !== lastCategory) {
+        if (product.name.indexOf(filterText) === -1) {
+          return;
+        }
+        if (inStockOnly && !product.stocked) {
+          return;
+        }
+
         rows.push(
           <ProductCategoryRow
             category={product.category}
@@ -24,15 +34,17 @@ export class ProductTable extends Component {
     });
 
     return (
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>{rows}</tbody>
-      </table>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>{rows}</tbody>
+        </table>
+      </div>
     )
   }
 }

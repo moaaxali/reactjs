@@ -5,7 +5,10 @@ import SearchBar from './SearchBar'
 export class FilterableProductTable extends Component {
   constructor(props) {
     super(props);
-    this.state = { filterText: 'ball', inStockOnly: false };
+    this.state = {
+      filterText: '',
+      inStockOnly: false
+    };
     this.handleSearchInputChange = this.handleSearchInputChange.bind(this);
     this.handleCheckInputChange = this.handleCheckInputChange.bind(this);
   }
@@ -21,17 +24,15 @@ export class FilterableProductTable extends Component {
   render() {
     return (
       <div>
-        <div>
-          <SearchBar
-            filterText={this.state.filterText}
-            inStockOnly={this.state.inStockOnly}
-            onSearchInputChange={this.handleSearchInputChange}
-            onCheckInputChange={this.handleCheckInputChange} />
-          <ProductTable
-            products={this.props.products}
-            filterText={this.state.filterText}
-            inStockOnly={this.state.inStockOnly} />
-        </div>
+        <SearchBar
+          filterText={this.state.filterText}
+          inStockOnly={this.state.inStockOnly}
+          onSearchInputChange={this.handleSearchInputChange}
+          onCheckInputChange={this.handleCheckInputChange} />
+        <ProductTable
+          products={this.props.products}
+          filterText={this.state.filterText}
+          inStockOnly={this.state.inStockOnly} />
       </div>
     )
   }
