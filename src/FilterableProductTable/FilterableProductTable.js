@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
 import './FilterableProductTable.css'
+import SearchBar from './SearchBar'
 
 export class FilterableProductTable extends Component {
   render() {
     return (
       <div>
         <div className="Filterable-product-table">
-          <div className="Search-bar">
-            <input type="text" placeholder="Search..." />
-            <input type="checkbox" /> Only show products in stock
-          </div>
+          <SearchBar />
           <div className="Product-table">
             <table>
               <tr>
