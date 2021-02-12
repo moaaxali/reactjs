@@ -1,0 +1,19 @@
+.Filterable-product-table {
+  width: 280px;
+  border: 1px solid orange;
+  padding: 10px;
+  margin: 5px;
+}
+.Search-bar {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid blue;
+}
+.Product-table {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid turquoise;
+}
+.Product-table table td {
+  border: 1px solid red;
+}
