@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <TasteOfJSX user="maaz" />
-      <FilterableProductTable product={PRODUCTS} />
+      <FilterableProductTable products={PRODUCTS} />
     </div>
   );
 }
