@@ -23,7 +23,7 @@ export class FilterableProductTable extends Component {
 
   render() {
     return (
-      <div>
+      <div className="Component">
         <SearchBar
           filterText={this.state.filterText}
           inStockOnly={this.state.inStockOnly}
