@@ -10,7 +10,9 @@ class TasteOfJSX extends Component {
       <div className="Component">
         <h3>Name: {formatName(user)}</h3>
         <p>Favourite Figure: {user.favoriteFigure}</p>
-        <ul>{user.hobbies.map((item, i) => <li key={item + i}>{item}</li>)}</ul>
+        <ul>
+          {user.hobbies.map((item, i) => <li key={item + i}>{item}</li>)}
+        </ul>
       </div>
     );
   }

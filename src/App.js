@@ -9,6 +9,7 @@ import Forms from './Forms/Forms';
 import LiftingStateUp from './LiftingStateUp/LiftingStateUp';
 import CurrencyConverter from './CurrencyConverter/CurrencyConverter';
 import ReactCompositions from './ReactCompositions/ReactCompositions';
+import FilterableProductTable from './FilterableProductTable/FilterableProductTable';
 
 const user = {
   firstName: 'Maaz',
@@ -24,6 +25,15 @@ const comment = {
     avatarUrl: 'https://placekitten.com/g/64/64',
   },
 };
+
+const PRODUCTS = [
+  { category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football' },
+  { category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball' },
+  { category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball' },
+  { category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch' },
+  { category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5' },
+  { category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7' }
+];
 
 function App() {
   return (
@@ -42,6 +52,7 @@ function App() {
       <LiftingStateUp />
       <CurrencyConverter />
       <ReactCompositions />
+      <FilterableProductTable products={PRODUCTS} />
     </div>
   );
 }
