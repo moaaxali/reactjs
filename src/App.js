@@ -12,8 +12,10 @@ import CurrencyConverter from './CurrencyConverter/CurrencyConverter';
 import ReactCompositions from './ReactCompositions/ReactCompositions';
 // import FilterableProductTable from './FilterableProductTable/FilterableProductTable';
 import ErrorBoundary from './ErrorBoundary'
+import ErrorBoundary2 from './BuggyCounter/ErrorBoundary'
 // make some typo in the path to the modele to see ErrorBoundary works
 const FilterableProductTable = React.lazy(() => import('./FilterableProductTable/FilterableProductTable'));
+const BuggyCounter = React.lazy(() => import('./BuggyCounter/BuggyCounter'));
 
 const user = {
   firstName: 'Maaz',
@@ -61,6 +63,11 @@ function App() {
           <FilterableProductTable products={PRODUCTS} />
         </Suspense>
       </ErrorBoundary>
+      <ErrorBoundary2>
+        <Suspense fallback={<div>Loading...</div>}>
+          <BuggyCounter />
+        </Suspense>
+      </ErrorBoundary2>
     </div>
   );
 }
