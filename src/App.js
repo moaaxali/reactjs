@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react';
 import TasteOfJSX from './TasteOfJSX/TasteOfJSX'
 import Comment from './Comment/Comment'
 import StatefulComponent from './StatefulComponent/StatefulComponent'
@@ -9,7 +10,8 @@ import Forms from './Forms/Forms';
 import LiftingStateUp from './LiftingStateUp/LiftingStateUp';
 import CurrencyConverter from './CurrencyConverter/CurrencyConverter';
 import ReactCompositions from './ReactCompositions/ReactCompositions';
-import FilterableProductTable from './FilterableProductTable/FilterableProductTable';
+// import FilterableProductTable from './FilterableProductTable/FilterableProductTable';
+const FilterableProductTable = React.lazy(() => import('./FilterableProductTable/FilterableProductTable'));
 
 const user = {
   firstName: 'Maaz',
@@ -52,7 +54,9 @@ function App() {
       <LiftingStateUp />
       <CurrencyConverter />
       <ReactCompositions />
-      <FilterableProductTable products={PRODUCTS} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <FilterableProductTable products={PRODUCTS} />
+      </Suspense>
     </div>
   );
 }
