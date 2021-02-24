@@ -11,6 +11,8 @@ import LiftingStateUp from './LiftingStateUp/LiftingStateUp';
 import CurrencyConverter from './CurrencyConverter/CurrencyConverter';
 import ReactCompositions from './ReactCompositions/ReactCompositions';
 // import FilterableProductTable from './FilterableProductTable/FilterableProductTable';
+import ErrorBoundary from './ErrorBoundary'
+// make some typo in the path to the modele to see ErrorBoundary works
 const FilterableProductTable = React.lazy(() => import('./FilterableProductTable/FilterableProductTable'));
 
 const user = {
@@ -54,9 +56,11 @@ function App() {
       <LiftingStateUp />
       <CurrencyConverter />
       <ReactCompositions />
-      <Suspense fallback={<div>Loading...</div>}>
-        <FilterableProductTable products={PRODUCTS} />
-      </Suspense>
+      <ErrorBoundary>
+        <Suspense fallback={<div>Loading...</div>}>
+          <FilterableProductTable products={PRODUCTS} />
+        </Suspense>
+      </ErrorBoundary>
     </div>
   );
 }
